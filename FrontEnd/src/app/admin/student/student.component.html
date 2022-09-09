@@ -1,0 +1,133 @@
+<div class="main">
+    <div class="container">
+      <div class="row ">
+          <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 g-3 ">
+              <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 ">
+                  <div class="card text-center " >
+                      <div class="card-body ">
+                        <div class="table-responsive">
+                          
+                          <table class="table">
+                              <thead class="table-secondary">
+                                <tr>
+                                  <th scope="col">Name</th>
+                                  <th scope="col">Register Number</th>
+                                  <th scope="col">address</th>
+                                  <th scope="col">Department</th>
+                                  <th scope="col">Semester</th>
+                                  <th scope="col">Email</th>
+                                  <th scope="col">Boarding point</th>
+                                  <th scope="col">Amount</th>
+                                  <th scope="col">Status</th>
+                                  <th colspan="2"><button class="btn btn-success" >Add Student</button></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr *ngFor="let i of data">
+                                  <th scope="row">
+                                    <div *ngIf="i.isEdit">
+                                      <input type="text" name="name" class="form-control" [(ngModel)]="i.name">
+                                    </div>
+                                    <div *ngIf="!i.isEdit">
+                                      {{i.name}}
+                                    </div>
+                                  </th>
+                                  <td>
+                                    <div *ngIf="i.isEdit">
+                                      <input type="text" name="register" class="form-control" [(ngModel)]="i.registerNumber">
+                                    </div>
+                                    <div *ngIf="!i.isEdit">
+                                      {{i.registerNumber}}
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div *ngIf="i.isEdit">
+                                      <input type="text" name="address" class="form-control" [(ngModel)]="i.address"  >
+                                    </div>
+                                    <div *ngIf="!i.isEdit">
+                                      {{i.address}}
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div *ngIf="i.isEdit">
+                                      <input type="text" name="dept" class="form-control" [(ngModel)]="i.department"  >
+                                    </div>
+                                    <div *ngIf="!i.isEdit">
+                                      {{i.department}}
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div *ngIf="i.isEdit">
+                                      <input type="text" name="sem" class="form-control" [(ngModel)]="i.semester" >
+                                    </div>
+                                    <div *ngIf="!i.isEdit">
+                                        {{i.semester}}
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div *ngIf="i.isEdit">
+                                      <input type="text" name="email" class="form-control" [(ngModel)]="i.email" >
+                                    </div>
+                                    <div *ngIf="!i.isEdit">
+                                      {{i.email}}
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div *ngIf="i.isEdit">
+                                      <input type="text" name="bpoint" class="form-control" [(ngModel)]="i.boardingPoint" >
+                                    </div>
+                                    <div *ngIf="!i.isEdit">
+                                      {{i.boardingPoint}}
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div *ngIf="i.isEdit">
+                                      <input type="text" name="amt" class="form-control" [(ngModel)]="i.amount"  >
+                                    </div>
+                                    <div *ngIf="!i.isEdit">
+                                      {{i.amount}}
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div *ngIf="i.isEdit">
+                                      <input type="text" class="form-control" name="status" [(ngModel)]="i.status"  >
+                                    </div>
+                                    <div *ngIf="!i.isEdit">
+                                      {{i.status}}
+                                    </div>
+                                  </td>
+                                  <td>
+                                    <div *ngIf="!i.isEdit">
+                                      <table class="g-3">
+                                        <tr>
+                                          <td><button class="btn btn-primary" (click)="onEdit(i)">Edit</button></td>
+                                          &nbsp;
+                                          <td><button class="btn btn-danger"  (click)="Deleteuser(i)">Delete</button></td>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                    <div *ngIf="i.isEdit">
+                                      <table class="g-3">
+                                        <tr>
+                                          <td><button class="btn btn-primary" (click)="Updateuser(i)">save</button></td>
+                                          &nbsp;
+                                          <td> <button class="btn btn-danger" (click)="i.isEdit = false">cancel</button></td>
+                                        </tr>
+                                      </table>
+                                    </div>
+                                    
+                                  
+                                  </td>
+                                  
+                                </tr>
+                              </tbody>
+                          </table>
+                        
+                        </div>
+                    </div>
+                </div>
+          </div>
+      </div>
+  </div>
+</div>
+</div>

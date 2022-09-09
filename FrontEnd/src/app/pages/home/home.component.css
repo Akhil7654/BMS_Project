@@ -1,0 +1,23 @@
+
+.carousel-item
+{
+     height: 400px;
+     width: 1550px;
+     background-size: cover;
+     background-position: top;
+}
+.step
+{
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+    font-weight: lighter;
+}
+div.step
+{
+    box-shadow: 5px 10px;
+    background-color: #243964;
+    width: 1536px;
+    padding: 50px;
+    margin: 0;
+}
